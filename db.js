@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-mongoose.connect(`${process.env.DB_PATH}/mern-auth`);
+mongoose.connect(`${process.env.MONGO_URI}/test`);
 
 export const db = mongoose.connection;
 
