@@ -123,7 +123,7 @@ petsRouter.delete('/:id', async (req, res) => {
 			fs.access(imagePath, fs.constants.F_OK, (err) => {
 				if (!err) {
 					fs.unlink(imagePath, (err) => {
-						console.error('Failed to delete image:', err);
+						console.error('Failed to delete photo:', err);
 					});
 				}
 			});
