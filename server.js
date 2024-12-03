@@ -4,6 +4,7 @@ import userRouter from './routers/userRouter.js';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import { db } from './db.js';
+import path from 'path';
 import petsRouter from './routers/petRouter.js';
 
 dotenv.config();
