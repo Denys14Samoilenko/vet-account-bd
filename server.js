@@ -14,10 +14,13 @@ app.use(
 	cors()
 );
 
+const __dirname = path.resolve();
+
 app.use('/auth', authRouter);
 app.use('/user', userRouter);
 app.use('/pets', petsRouter);
-app.use('/uploads', express.static('uploads'));
+// app.use('/uploads', express.static('uploads'));
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 app.get('/', (request, response) => {
 	response.status(200).send('Welcome to API');
